@@ -11,11 +11,13 @@
 # include <sys/stat.h>
 # include <fcntl.h>
 # include <unistd.h>
+# include <sys/mman.h>
 
 typedef struct	s_data
 {
 	int			fd;
-	struct stat	file;
+	struct stat	info;
+	void 		*file;
 }				t_data;
 
 #endif //MY_OWN_NM_MY_OWN_NM_H
