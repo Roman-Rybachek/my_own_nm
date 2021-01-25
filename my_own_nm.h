@@ -12,6 +12,9 @@
 # include <fcntl.h>
 # include <unistd.h>
 # include <sys/mman.h>
+# include <elf.h>
+# include <string.h>
+
 
 typedef struct	s_data
 {
@@ -20,4 +23,4 @@ typedef struct	s_data
 	void 		*file;
 }				t_data;
 
-#endif //MY_OWN_NM_MY_OWN_NM_H
+#endif
