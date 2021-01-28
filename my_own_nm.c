@@ -1,7 +1,5 @@
 #include "my_own_nm.h"
 
-t_data	data;
-
 int 	error_return(const char *err)
 {
 	printf("%s\n", err);
@@ -11,12 +9,6 @@ int 	error_return(const char *err)
 	if (data.fd > 0)
 		close(data.fd);
 	exit(1);
-}
-
-void 	main_logic()
-{
-	Elf64_Ehdr *header = (Elf64_Ehdr*)data.file;
-	header->
 }
 
 int		main(int argc, char **argv)
@@ -35,7 +27,13 @@ int		main(int argc, char **argv)
 	if (data.file == MAP_FAILED)
 		error_return("error: mmap error");
 
-	main_logic();
+	if (is_elf(data.file))
+		elf_handler();
+	/*else if (is_macho(data.file))
+		mucho_handler();
+	else if (is_pe(data.file))
+		pe_handler();
+	*/
 
 	munmap(data.file, data.info.st_size);
 	close(data.fd);
