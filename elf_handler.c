@@ -4,18 +4,16 @@
 void elf_handler()
 {
 	Elf64_Ehdr	*header = data.file;
-	Elf64_Shdr	*cur_sec = data.file + header->e_shoff;
-	Elf64_Shdr x;
+	Elf64_Shdr	*start = data.file + header->e_shoff + header->e_shentsize;
+	Elf64_Shdr	*curr = start;
 
-	int sym = 0;
-	int str = 0;
+	char *str = NULL;
 
 	for (int i = 0; i < header->e_shnum; ++i) {
-		x = cur_sec[i];
-		if (x.sh_type == SHT_SYMTAB)
-			sym++;
-		if (x.sh_type == SHT_STRTAB)
-			str++;
+		str = (char*)data.file + (start + header->e_shstrndx - 1)->sh_offset + curr->sh_name;
+		//str = (char*)(start + (header->e_shstrndx - 1)) + curr->sh_name;
+		printf ("%s\n", str);
+		curr += 1;
 	}
 
 }
