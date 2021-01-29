@@ -15,20 +15,12 @@
 # include <elf.h>
 # include <string.h>
 
-typedef struct	s_elf
-{
-	int			phoff;
-	int 		shoff;
-}				t_elf;
 
 typedef struct	s_data
 {
 	int			fd;
 	struct stat	info;
 	void 		*file;
-
-	uint8_t 	class;
-	uint8_t 	endian;
 }				t_data;
 
 int 	is_elf(void *p);
