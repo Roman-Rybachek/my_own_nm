@@ -1,39 +1,25 @@
 #include "my_own_nm.h"
 
-static void getSymbols(Elf64_Sym *syms)
+static void getSymbols()
 {
-	void	*end;
-	char	*str;
-
-	end = data.file + data.curr_shdr->sh_offset + data.curr_shdr->sh_size;
-	str = NULL;
-	syms++;
-	while ((void*)syms < end)
-	{
-		str = data.file + (data.start_shdr + data.hdr->e_shstrndx - 1)->sh_offset + syms->st_name;
-		printf ("%s\n", str);
-		syms++;
+	int count = data.sym_shdr->sh_size / data.sym_shdr->sh_entsize;
+	for (int i = 1; i < count; ++i) {
+		printf("%s\n", data.file + data.shdr[data.hdr->e_shstrndx].sh_offset + data.syms[i].st_name);
 	}
 }
 
-//		str = (char*)data.file + (data.start_shdr + data.hdr->e_shstrndx - 1)->sh_offset + data.curr_shdr->sh_name;
-//		printf ("%d)%s\n", i,str);
-
 void elf_handler()
 {
-	Elf64_Sym	*syms = NULL;
+	data.hdr = (Elf64_Ehdr*)data.file;
+	data.shdr = (Elf64_Shdr*)(data.file + data.hdr->e_shoff);
 
-	data.hdr = data.file;
-	data.start_shdr = data.file + data.hdr->e_shoff + data.hdr->e_shentsize;
-	data.curr_shdr = data.start_shdr;
-	char *str = NULL;
-
-	for (int i = 1; i < data.hdr->e_shnum;  ++i) {
-		if (data.curr_shdr->sh_type == SHT_SYMTAB) {
-			syms = data.file + data.curr_shdr->sh_offset;
-			getSymbols(syms);
+	for (int i = 1; i < data.hdr->e_shnum; ++i) {
+//		printf("%s\n", data.file + data.shdr[data.hdr->e_shstrndx].sh_offset + data.shdr[i].sh_name);
+		if (data.shdr[i].sh_type == SHT_SYMTAB) {
+			data.sym_shdr = &data.shdr[i];
+			data.syms = (Elf64_Sym*)(data.file + data.shdr[i].sh_offset);
+			getSymbols();
+			return ;
 		}
-		data.curr_shdr += 1;
 	}
-
 }

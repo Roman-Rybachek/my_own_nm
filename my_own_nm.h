@@ -23,8 +23,9 @@ typedef struct	s_data
 	void 		*file;
 
 	Elf64_Ehdr	*hdr;
-	Elf64_Shdr	*curr_shdr;
-	Elf64_Shdr	*start_shdr;
+	Elf64_Shdr	*shdr;
+	Elf64_Shdr	*sym_shdr;
+	Elf64_Sym	*syms;
 }				t_data;
 
 int 	is_elf(void *p);
