@@ -21,6 +21,10 @@ typedef struct	s_data
 	int			fd;
 	struct stat	info;
 	void 		*file;
+
+	Elf64_Ehdr	*hdr;
+	Elf64_Shdr	*curr_shdr;
+	Elf64_Shdr	*start_shdr;
 }				t_data;
 
 int 	is_elf(void *p);
