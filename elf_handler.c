@@ -1,10 +1,19 @@
 #include "my_own_nm.h"
 
+
+
 static void getSymbols()
 {
-	int count = data.sym_shdr->sh_size / data.sym_shdr->sh_entsize;
-	for (int i = 1; i < count; ++i) {
-		printf("%s\n", data.file + data.shdr[data.hdr->e_shstrndx].sh_offset + data.syms[i].st_name);
+	char *output;
+
+	for (Elf64_Xword i = 1; i < data.sym_shdr->sh_size / data.sym_shdr->sh_entsize; ++i) {
+		if (data.syms[i].st_name) {
+			if (ELF64_ST_TYPE(data.syms[i].st_info) != 4)
+			{
+				output = data.file + data.shdr[data.sym_shdr->sh_link].sh_offset + data.syms[i].st_name;
+				printf("%s\n", output);
+			}
+		}
 	}
 }
 
@@ -19,7 +28,6 @@ void elf_handler()
 			data.sym_shdr = &data.shdr[i];
 			data.syms = (Elf64_Sym*)(data.file + data.shdr[i].sh_offset);
 			getSymbols();
-			return ;
 		}
 	}
 }
