@@ -55,6 +55,7 @@ static void getSymbols()
 				adr = fillAddr(data.shdr[data.syms[i].st_shndx].sh_addr);
 				output = createOutput(&adr, 'X', &name);
 				printf("%s\n", output);
+				free(output);
 			}
 		}
 	}
