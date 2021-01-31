@@ -15,12 +15,12 @@
 # include <elf.h>
 # include <string.h>
 
-
 typedef struct	s_data
 {
 	int			fd;
 	struct stat	info;
 	void 		*file;
+	char 		**table;
 
 	Elf64_Ehdr	*hdr;
 	Elf64_Shdr	*shdr;
@@ -30,6 +30,7 @@ typedef struct	s_data
 
 int 	is_elf(void *p);
 void 	elf_handler();
+char	*ft_itoa_hex_t(size_t n);
 
 t_data	data;
 

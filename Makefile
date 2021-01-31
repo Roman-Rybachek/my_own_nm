@@ -12,10 +12,12 @@
 
 NAME = 				my_own_nm
 
+# LIBFT =				libft/libft.a
+
 HEADERS =			my_own_nm.h
 
-FLAGS_OBJ = 		-c -Wall -Wextra -Werror -I.
-FLAGS_BIN =			 -Wall -Wextra -Werror -o $(NAME)
+FLAGS_OBJ = 		-c -Wall -Wextra -Werror
+FLAGS_BIN =			-Wall -Wextra -Werror -o $(NAME)
 
 SRC = 				my_own_nm.c \
 					utils.c \
