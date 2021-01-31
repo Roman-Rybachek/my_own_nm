@@ -15,7 +15,6 @@ static char *fillAddr(Elf64_Addr value)
 	}
 	hex = ft_itoa_hex_t(value);
 	len = strlen(hex);
-	ret = calloc(17, 1);
 	memset(ret, '0', 16);
 	for (int i = 0; i < len; ++i) {
 		ret[16 - len + i] = hex[i];
@@ -24,11 +23,27 @@ static char *fillAddr(Elf64_Addr value)
 	return ret;
 }
 
+static char *createOutput(char **adr, char symbolType, char **name)
+{
+	char *str;
+
+	str = malloc(strlen(*adr) + 3 + strlen(*name) + 1);
+	str[strlen(*adr) + 3 + strlen(*name)] = '\0';
+	memcpy(str, *adr, 16);
+	memcpy(str + 16, "   ", 3);
+	str[17] = symbolType;
+	memcpy(str + 19, *name, strlen(*name));
+	free(*name);
+	free(*adr);
+	return str;
+}
+
 static void getSymbols()
 {
 	int 			count;
 	char			*name;
 	char			*adr;
+	char 			*output;
 
 	count = data.sym_shdr->sh_size / data.sym_shdr->sh_entsize;
 	data.table = (char**)malloc(sizeof(char*) * count);
@@ -36,9 +51,10 @@ static void getSymbols()
 		if (data.syms[i].st_name) {
 			if (ELF64_ST_TYPE(data.syms[i].st_info) != 4)
 			{
-				name = data.file + data.shdr[data.sym_shdr->sh_link].sh_offset + data.syms[i].st_name;
+				name = strdup(data.file + data.shdr[data.sym_shdr->sh_link].sh_offset + data.syms[i].st_name);
 				adr = fillAddr(data.shdr[data.syms[i].st_shndx].sh_addr);
-				printf("%s %s\n", adr, name);
+				output = createOutput(&adr, 'X', &name);
+				printf("%s\n", output);
 			}
 		}
 	}
