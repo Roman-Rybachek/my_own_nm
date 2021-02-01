@@ -13,28 +13,23 @@ int 	error_return(const char *err)
 
 int		main(int argc, char **argv)
 {
-	data.fd = 0;
-	data.file = NULL;
-
+	int			fd;
+	void		*file;
+	struct stat	info;
 
 	if (argc != 2)
 		error_return("error: bad number of arguments");
-	if ((data.fd = open(argv[1], O_RDONLY)) < 0)
+	if ((fd = open(argv[1], O_RDONLY)) < 0)
 		error_return("error: bad argument");
-	if (fstat(data.fd, &data.info) < 0)
+	if (fstat(fd, &info) < 0)
 		error_return("error: fstat error");
-	data.file = mmap(NULL, data.info.st_size, PROT_READ, MAP_PRIVATE, data.fd, 0);
-	if (data.file == MAP_FAILED)
+	file = mmap(NULL, info.st_size, PROT_READ, MAP_PRIVATE, fd, 0);
+	if (file == MAP_FAILED)
 		error_return("error: mmap error");
+	if (is_elf(file))
+		elf_handler(file);
 
-	if (is_elf(data.file))
-		elf_handler();
-	/*else if (is_macho(data.file))
-		mucho_handler();
-	else if (is_pe(data.file))
-		pe_handler();
-	*/
-
-	munmap(data.file, data.info.st_size);
-	close(data.fd);
+	munmap(file, info.st_size);
+	close(fd);
+	return (0);
 }

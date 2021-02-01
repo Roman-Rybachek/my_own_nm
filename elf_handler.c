@@ -38,40 +38,43 @@ static char *createOutput(char **adr, char symbolType, char **name)
 	return str;
 }
 
-static void getSymbols()
+
+
+static void getSymbols(void *file, const Elf64_Sym *sym, int curSHdr)
 {
 	int 			count;
 	char			*name;
 	char			*adr;
 	char 			*output;
+	Elf64_Shdr 		*shdr;
 
-	count = data.sym_shdr->sh_size / data.sym_shdr->sh_entsize;
-	data.table = (char**)malloc(sizeof(char*) * count);
+	shdr = getSHdr(file, curSHdr);
+	count = shdr->sh_size / shdr->sh_entsize;
 	for (int i = 1; i < count; ++i) {
-		if (data.syms[i].st_name) {
-			if (ELF64_ST_TYPE(data.syms[i].st_info) != 4)
+		if (sym[i].st_name) {
+			if (ELF64_ST_TYPE(sym[i].st_info) != 4)
 			{
-				name = strdup(data.file + data.shdr[data.sym_shdr->sh_link].sh_offset + data.syms[i].st_name);
-				adr = fillAddr(data.shdr[data.syms[i].st_shndx].sh_addr);
+				name = strdup(file + getSHdr(file, shdr->sh_link)->sh_offset + sym[i].st_name);
+				adr = fillAddr(getSHdr(file, sym[i].st_shndx)->sh_addr);
 				output = createOutput(&adr, 'X', &name);
 				printf("%s\n", output);
-				free(output);
 			}
 		}
 	}
 }
 
-void elf_handler()
+void elf_handler(void *file)
 {
-	data.hdr = (Elf64_Ehdr*)data.file;
-	data.shdr = (Elf64_Shdr*)(data.file + data.hdr->e_shoff);
+	Elf64_Ehdr	*hdr;
+	Elf64_Sym	*sym;
 
-	for (int i = 1; i < data.hdr->e_shnum; ++i) {
-//		printf("%s\n", data.file + data.shdr[data.hdr->e_shstrndx].sh_offset + data.shdr[i].sh_name);
-		if (data.shdr[i].sh_type == SHT_SYMTAB) {
-			data.sym_shdr = &data.shdr[i];
-			data.syms = (Elf64_Sym*)(data.file + data.shdr[i].sh_offset);
-			getSymbols();
+	hdr = (Elf64_Ehdr*)file;
+	sym = NULL;
+	for (int i = 1; i < hdr->e_shnum; ++i) {
+		Elf64_Shdr *c = getSHdr(file, i);
+		if (c->sh_type == SHT_SYMTAB) {
+			sym = (Elf64_Sym*)(file + getSHdr(file, i)->sh_offset);
+			getSymbols(file, sym, i);
 		}
 	}
 }
