@@ -68,7 +68,7 @@ static char		*ft_cycle(int counter, size_t i, size_t n, char *result)
 	return (result);
 }
 
-char			*ft_itoa_hex_t(size_t n)
+char			*ft_itoa_hex(size_t n)
 {
 	char	*result;
 	int		counter;

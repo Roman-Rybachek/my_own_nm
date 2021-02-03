@@ -22,7 +22,8 @@ FLAGS_BIN =			-Wall -Wextra -Werror -o $(NAME)
 SRC = 				my_own_nm.c \
 					utils.c \
 					elf_handler.c \
-					ft_itoa_hex_t.c
+					ft_itoa_hex.c \
+					lists.c
 
 
 

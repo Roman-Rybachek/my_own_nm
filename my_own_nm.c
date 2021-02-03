@@ -16,6 +16,7 @@ int		main(int argc, char **argv)
 	int			fd;
 	void		*file;
 	struct stat	info;
+	char 		**table;
 
 	if (argc != 2)
 		error_return(file, fd, info, "error: bad number of arguments");
@@ -27,7 +28,10 @@ int		main(int argc, char **argv)
 	if (file == MAP_FAILED)
 		error_return(file, fd, info,"error: mmap error");
 	if (is_elf(file))
-		elf_handler(file);
+		table = elf_handler(file);
+	for (int i = 0; table[i]; ++i) {
+		printf("%s\n", table[i]);
+	}
 
 	munmap(file, info.st_size);
 	close(fd);

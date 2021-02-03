@@ -13,7 +13,7 @@ static char *fillAddr(Elf64_Addr value)
 		memset(ret, ' ', 16);
 		return ret;
 	}
-	hex = ft_itoa_hex_t(value);
+	hex = ft_itoa_hex(value);
 	len = strlen(hex);
 	memset(ret, '0', 16);
 	for (int i = 0; i < len; ++i) {
@@ -40,7 +40,7 @@ static char *createOutput(char **adr, char symbolType, char **name)
 
 
 
-static void getSymbols(void *file, const Elf64_Sym *sym, int curSHdr)
+static void getSymbols(void *file, const Elf64_Sym *sym, int curSHdr, t_list **lst)
 {
 	int 			count;
 	char			*name;
@@ -57,24 +57,44 @@ static void getSymbols(void *file, const Elf64_Sym *sym, int curSHdr)
 				name = strdup(file + getSHdr(file, shdr->sh_link)->sh_offset + sym[i].st_name);
 				adr = fillAddr(getSHdr(file, sym[i].st_shndx)->sh_addr);
 				output = createOutput(&adr, 'X', &name);
-				printf("%s\n", output);
+				ft_lstadd_back(lst, ft_lstnew(output));
 			}
 		}
 	}
 }
 
-void elf_handler(void *file)
+char **create_table(t_list **lst)
+{
+	char		**table;
+	t_list		*tmp_list;
+
+	if (!(table = (char**)malloc(sizeof(char*) * (ft_lstsize(*lst) + 1))))
+		exit(1);
+	table[ft_lstsize(*lst)] = NULL;
+	tmp_list = *lst;
+	for (int i = 0; i < ft_lstsize(*lst); ++i) {
+		table[i] = (char*)tmp_list->content;
+		tmp_list = tmp_list->next;
+	}
+	ft_lst_clear(lst);
+	return table;
+}
+
+char **elf_handler(void *file)
 {
 	Elf64_Ehdr	*hdr;
 	Elf64_Sym	*sym;
+	t_list		*lst;
 
+	lst = NULL;
 	hdr = (Elf64_Ehdr*)file;
 	sym = NULL;
 	for (int i = 1; i < hdr->e_shnum; ++i) {
 		Elf64_Shdr *c = getSHdr(file, i);
 		if (c->sh_type == SHT_SYMTAB) {
 			sym = (Elf64_Sym*)(file + getSHdr(file, i)->sh_offset);
-			getSymbols(file, sym, i);
+			getSymbols(file, sym, i, &lst);
 		}
 	}
+	return (create_table(&lst));
 }

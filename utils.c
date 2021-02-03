@@ -1,6 +1,6 @@
 #include "my_own_nm.h"
 
-int 	is_elf(void *void_pointer)
+int 		is_elf(void *void_pointer)
 {
 	char *p;
 
@@ -13,7 +13,7 @@ int 	is_elf(void *void_pointer)
 /*
  * There a lot of code, but it is readable.
  */
-Elf64_Shdr *getSHdr(void *PtrToELF, int index)
+Elf64_Shdr	*getSHdr(void *PtrToELF, int index)
 {
 	Elf64_Ehdr *elf_header;
 	Elf64_Shdr *section_array;
@@ -25,7 +25,7 @@ Elf64_Shdr *getSHdr(void *PtrToELF, int index)
 	return (section);
 }
 
-char *getSName(void *PtrToElf, int index)
+char		*getSName(void *PtrToElf, int index)
 {
 	Elf64_Ehdr *elf_header;
 	Elf64_Shdr *section;
@@ -37,3 +37,28 @@ char *getSName(void *PtrToElf, int index)
 	printf("%s\n", name);
 	return name;
 }
+
+int			cmpadr(char *s1, char *s2)
+{
+	int isNull[2];
+
+	isNull[0] = strncmp("                ", s1, 16);
+	isNull[1] = strncmp("                ", s2, 16);
+	if (isNull[0] == 0 && isNull[1] == 0)
+		return (0);
+	else if (isNull[0] == 0)
+		return (-1);
+	else if (isNull[1] == 0)
+		return (1);
+	else if (strtoll(s1, NULL, 16) > strtoll(s2, NULL, 16))
+		return (1);
+	else if (strtoll(s1, NULL, 16) < strtoll(s2, NULL, 16))
+		return (-1);
+	else
+		return (0);
+}
+/*
+char		**sort(char **table, int(*)(char*, char*))
+{
+	char **sorted = (char**)malloc(sizeof(char*) * )
+}*/
