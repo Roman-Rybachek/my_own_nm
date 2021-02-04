@@ -39,5 +39,6 @@ int					cmpname(char *s1, char *s2);
 void 				sort(char **table, int(*cmp)(char*, char*));
 void 				get_prog_name(int argc, char **argv, int *fd);
 int 				find_option(int argc, char **argv, char option);
+int					ft_tolower(int c);
 
 #endif

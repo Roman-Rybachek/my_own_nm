@@ -29,7 +29,6 @@ char		*getSName(void *PtrToElf, int index)
 	section = getSHdr(PtrToElf, index);
 	elf_header = (Elf64_Ehdr*)PtrToElf;
 	name = PtrToElf + getSHdr(PtrToElf, elf_header->e_shstrndx)->sh_offset + section->sh_name;
-	printf("%s\n", name);
 	return name;
 }
 int			ft_darr_len(char **arr)

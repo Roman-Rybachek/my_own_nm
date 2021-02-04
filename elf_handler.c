@@ -36,7 +36,29 @@ static char *createOutput(char **adr, char symbolType, char **name)
 	free(*adr);
 	return str;
 }
-static void getSymbols(void *file, const Elf64_Sym *sym, int curSHdr, t_list **lst)
+static char symbolType(void *file, Elf64_Sym *sym, int i)
+{
+	char *name = getSName(file, sym[i].st_shndx);
+	int	bind = ELF64_ST_BIND(sym[i].st_info);
+	char ret = 'X';
+
+	if (!strcmp(name, ".data") || !strcmp(name, ".data1")) // пробелма с ловеркейс
+		ret = 'D';
+	else if(!strcmp(name, ".bss"))
+		ret = 'B';
+	else if(!strcmp(name, ".text") || getSHdr(file, sym[i].st_shndx)->sh_flags == 6) // проблема с разными случаями
+		ret = 'T';
+	//else if()
+
+	if (bind == 0)
+		ret = ft_tolower(ret);
+	else if (bind == 2 && strchr("D", ret))
+		ret = 'W';
+	else if (bind == 2)
+		ret = 'w';
+	return ret;
+}
+static void getSymbols(void *file, Elf64_Sym *sym, int curSHdr, t_list **lst)
 {
 	int 			count;
 	char			*name;
@@ -52,7 +74,7 @@ static void getSymbols(void *file, const Elf64_Sym *sym, int curSHdr, t_list **l
 			{
 				name = strdup(file + getSHdr(file, shdr->sh_link)->sh_offset + sym[i].st_name);
 				adr = fillAddr(sym[i].st_value);
-				output = createOutput(&adr, 'X', &name);
+				output = createOutput(&adr, symbolType(file, sym, i), &name);
 				ft_lstadd_back(lst, ft_lstnew(output));
 			}
 		}
