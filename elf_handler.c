@@ -55,7 +55,7 @@ static void getSymbols(void *file, const Elf64_Sym *sym, int curSHdr, t_list **l
 			if (ELF64_ST_TYPE(sym[i].st_info) != 4)
 			{
 				name = strdup(file + getSHdr(file, shdr->sh_link)->sh_offset + sym[i].st_name);
-				adr = fillAddr(getSHdr(file, sym[i].st_shndx)->sh_addr);
+				adr = fillAddr(sym[i].st_value);
 				output = createOutput(&adr, 'X', &name);
 				ft_lstadd_back(lst, ft_lstnew(output));
 			}
