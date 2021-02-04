@@ -35,6 +35,7 @@ char				*getSName(void *PtrToElf, int index);
 char				*ft_itoa_hex(size_t n);
 int					ft_darr_len(char **arr);
 int					cmpadr(char *s1, char *s2);
+int					cmpname(char *s1, char *s2);
 void 				sort(char **table, int(*cmp)(char*, char*));
 void 				get_prog_name(int argc, char **argv, int *fd);
 int 				find_option(int argc, char **argv, char option);

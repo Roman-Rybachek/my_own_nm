@@ -34,6 +34,7 @@ int		main(int argc, char **argv)
 		error_return(file, fd, info,"error: mmap error");
 	if (is_elf(file))
 		table = elf_handler(file);
+	sort(table, cmpname);
 	if (find_option(argc, argv, 'n'))
 		sort(table, cmpadr);
 	print_table(table);

@@ -22,7 +22,6 @@ static char *fillAddr(Elf64_Addr value)
 	free(hex);
 	return ret;
 }
-
 static char *createOutput(char **adr, char symbolType, char **name)
 {
 	char *str;
@@ -37,9 +36,6 @@ static char *createOutput(char **adr, char symbolType, char **name)
 	free(*adr);
 	return str;
 }
-
-
-
 static void getSymbols(void *file, const Elf64_Sym *sym, int curSHdr, t_list **lst)
 {
 	int 			count;
@@ -62,7 +58,6 @@ static void getSymbols(void *file, const Elf64_Sym *sym, int curSHdr, t_list **l
 		}
 	}
 }
-
 char **create_table(t_list **lst)
 {
 	char		**table;
@@ -79,7 +74,6 @@ char **create_table(t_list **lst)
 	ft_lst_clear(lst);
 	return table;
 }
-
 char **elf_handler(void *file)
 {
 	Elf64_Ehdr	*hdr;
