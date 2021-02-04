@@ -12,18 +12,23 @@
 
 NAME = 				my_own_nm
 
-# LIBFT =				libft/libft.a
+# LIBFT =			libft/libft.a
+
+UTILS_SRCS =		utils/
 
 HEADERS =			my_own_nm.h
 
-FLAGS_OBJ = 		-c -Wall -Wextra -Werror
-FLAGS_BIN =			-Wall -Wextra -Werror -o $(NAME)
+FLAGS_OBJ = 		-c -Wall -Wextra -Werror -I.
+FLAGS_BIN =			-Wall -Wextra -Werror -I. -o $(NAME)
 
 SRC = 				my_own_nm.c \
-					utils.c \
 					elf_handler.c \
-					ft_itoa_hex.c \
-					lists.c
+					$(UTILS_SRCS)utils.c \
+					$(UTILS_SRCS)ft_itoa_hex.c \
+					$(UTILS_SRCS)lists.c \
+					$(UTILS_SRCS)argv_handler.c \
+					$(UTILS_SRCS)sort.c \
+
 
 
 

@@ -11,17 +11,22 @@ int 	error_return(void *file, int fd, struct stat info, const char *err)
 	exit(1);
 }
 
+static void 	print_table(char **table)
+{
+	for (int i = 0; table[i]; ++i) {
+		printf("%s\n", table[i]);
+		free(table[i]);
+	}
+}
+
 int		main(int argc, char **argv)
 {
 	int			fd;
-	void		*file;
 	struct stat	info;
-	char 		**table;
+	void		*file = NULL;
+	char 		**table = NULL;
 
-	if (argc != 2)
-		error_return(file, fd, info, "error: bad number of arguments");
-	if ((fd = open(argv[1], O_RDONLY)) < 0)
-		error_return(file, fd, info,"error: bad argument");
+	get_prog_name(argc, argv, &fd);
 	if (fstat(fd, &info) < 0)
 		error_return(file, fd, info,"error: fstat error");
 	file = mmap(NULL, info.st_size, PROT_READ, MAP_PRIVATE, fd, 0);
@@ -29,10 +34,10 @@ int		main(int argc, char **argv)
 		error_return(file, fd, info,"error: mmap error");
 	if (is_elf(file))
 		table = elf_handler(file);
-	for (int i = 0; table[i]; ++i) {
-		printf("%s\n", table[i]);
-	}
-
+	if (find_option(argc, argv, 'n'))
+		sort(table, cmpadr);
+	print_table(table);
+	free(table);
 	munmap(file, info.st_size);
 	close(fd);
 	return (0);

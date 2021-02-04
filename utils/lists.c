@@ -10,8 +10,7 @@ t_list			*ft_lstnew(void *content)
 	element->next = 0;
 	return (element);
 }
-
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void			ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*p;
 
@@ -25,8 +24,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	else if (lst)
 		*lst = new;
 }
-
-void 	ft_lst_clear(t_list **list)
+void 			ft_lst_clear(t_list **list)
 {
 	t_list *tmp = NULL;
 
@@ -37,8 +35,7 @@ void 	ft_lst_clear(t_list **list)
 		free(tmp);
 	}
 }
-
-int		ft_lstsize(t_list *lst)
+int				ft_lstsize(t_list *lst)
 {
 	t_list	*p;
 	int		count;
