@@ -40,19 +40,25 @@ static char symbolType(void *file, Elf64_Sym *sym, int i)
 {
 	char *name = getSName(file, sym[i].st_shndx);
 	int	bind = ELF64_ST_BIND(sym[i].st_info);
-	char ret = 'X';
+	char ret = '!';
+	Elf64_Shdr *sec = getSHdr(file, sym[i].st_shndx);
 
 	if (!strcmp(name, ".data") || !strcmp(name, ".data1")) // пробелма с ловеркейс
 		ret = 'D';
 	else if(!strcmp(name, ".bss"))
 		ret = 'B';
-	else if(!strcmp(name, ".text") || getSHdr(file, sym[i].st_shndx)->sh_flags == 6) // проблема с разными случаями
+	else if(!strcmp(name, ".text") || sec->sh_flags == 6) // проблема с разными случаями
 		ret = 'T';
-	//else if()
+	else if (sec->sh_flags == 2)
+		ret = 'R';
+	else if (sym[i].st_shndx == SHN_UNDEF)
+		ret = 'U';
+	else if (sym[i].st_shndx == SHN_ABS)
+		ret = 'A';
 
 	if (bind == 0)
 		ret = ft_tolower(ret);
-	else if (bind == 2 && strchr("D", ret))
+	else if (bind == 2 && ret != '!')
 		ret = 'W';
 	else if (bind == 2)
 		ret = 'w';
