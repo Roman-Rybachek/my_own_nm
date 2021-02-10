@@ -4,6 +4,7 @@ int		elf_sym_d(char *name, Elf64_Sym sym)
 {
 	if (!strcmp(name, ".data") ||
 		!strcmp(name, ".data1") ||
+		!strcmp(name, ".got") ||
 		sym.st_shndx & 3)
 		return (1);
 	return (0);
