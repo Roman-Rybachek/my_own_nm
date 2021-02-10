@@ -5,7 +5,8 @@ cmake_minimum_required(VERSION 3.17)
 INCLUDE_DIRECTORIES(./)
 
 ADD_EXECUTABLE(my_own_nm    my_own_nm.c
-                            elf_handler.c
+                            elf/elf_handler.c
+                            elf/elf_symbols.c
                             utils/utils.c
                             utils/ft_itoa_hex.c
                             utils/lists.c

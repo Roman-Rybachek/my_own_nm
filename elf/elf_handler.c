@@ -43,17 +43,17 @@ static char symbolType(void *file, Elf64_Sym *sym, int i)
 	char ret = '!';
 	Elf64_Shdr *sec = getSHdr(file, sym[i].st_shndx);
 
-	if (!strcmp(name, ".data") || !strcmp(name, ".data1")) // пробелма с ловеркейс
+	if (elf_sym_d(name, sym[i]))
 		ret = 'D';
-	else if(!strcmp(name, ".bss"))
-		ret = 'B';
-	else if(!strcmp(name, ".text") || sec->sh_flags == 6) // проблема с разными случаями
+	if (elf_sym_t(name, sec))
 		ret = 'T';
-	else if (sec->sh_flags == 2)
+	if (elf_sym_r(sec))
 		ret = 'R';
-	else if (sym[i].st_shndx == SHN_UNDEF)
+	if(!strcmp(name, ".bss"))
+		ret = 'B';
+	if (sym[i].st_shndx == SHN_UNDEF)
 		ret = 'U';
-	else if (sym[i].st_shndx == SHN_ABS)
+	if (sym[i].st_shndx == SHN_ABS)
 		ret = 'A';
 
 	if (bind == 0)
