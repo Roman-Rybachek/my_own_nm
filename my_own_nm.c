@@ -19,6 +19,7 @@ static void 	print_table(char **table)
 	}
 }
 
+
 int		main(int argc, char **argv)
 {
 	int			fd;

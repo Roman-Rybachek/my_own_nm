@@ -40,10 +40,11 @@ static char symbolType(void *file, Elf64_Sym *sym, int i)
 {
 	char *name = getSName(file, sym[i].st_shndx);
 	int	bind = ELF64_ST_BIND(sym[i].st_info);
+	int type = ELF64_ST_TYPE(sym[i].st_info);
 	char ret = '!';
 	Elf64_Shdr *sec = getSHdr(file, sym[i].st_shndx);
 
-	if (elf_sym_d(name, sym[i]))
+	if (elf_sym_d(sec))
 		ret = 'D';
 	if (elf_sym_t(name, sec))
 		ret = 'T';
@@ -55,13 +56,18 @@ static char symbolType(void *file, Elf64_Sym *sym, int i)
 		ret = 'U';
 	if (sym[i].st_shndx == SHN_ABS)
 		ret = 'A';
-
-	if (bind == 0)
-		ret = ft_tolower(ret);
-	else if (bind == 2 && ret != '!')
+	if (sym[i].st_shndx == SHN_COMMON)
+		ret = 'C';
+	if (bind == 2 && type == 1)
+		ret = 'V';
+	if (bind == 2 && type != 1)
 		ret = 'W';
-	else if (bind == 2)
-		ret = 'w';
+
+	if (bind == 0 || (bind == 2 && !sym[i].st_value))
+		ret = ft_tolower(ret);
+
+	// g G i N p s S u - ?
+
 	return ret;
 }
 static void getSymbols(void *file, Elf64_Sym *sym, int curSHdr, t_list **lst)

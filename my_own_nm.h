@@ -42,8 +42,10 @@ int 				find_option(int argc, char **argv, char option);
 int					ft_tolower(int c);
 
 
-int					elf_sym_d(char *name, Elf64_Sym sym);
+
+int					elf_sym_d(Elf64_Shdr *sec);
 int 				elf_sym_t(char *name, Elf64_Shdr *sec);
 int 				elf_sym_r(Elf64_Shdr *sec);
+void 				elf_all_sym_info(void *file, Elf64_Shdr *sec, Elf64_Sym sym);
 
 #endif
