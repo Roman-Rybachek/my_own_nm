@@ -36,7 +36,7 @@ int			ft_darr_len(char **arr)
 	int height;
 
 	height = 0;
-	while (*arr)
+	while (arr && *arr)
 	{
 		arr++;
 		height++;

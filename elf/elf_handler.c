@@ -50,8 +50,6 @@ static char symbolType(void *file, Elf64_Sym *sym, int i)
 		ret = 'T';
 	if (elf_sym_r(sec))
 		ret = 'R';
-	if(!strcmp(name, ".bss"))
-		ret = 'B';
 	if (sym[i].st_shndx == SHN_UNDEF)
 		ret = 'U';
 	if (sym[i].st_shndx == SHN_ABS)
@@ -62,6 +60,10 @@ static char symbolType(void *file, Elf64_Sym *sym, int i)
 		ret = 'V';
 	if (bind == 2 && type != 1)
 		ret = 'W';
+	if(!strcmp(name, ".bss"))
+		ret = 'B';
+	if(!strcmp(name, ".debug"))
+		ret = 'N';
 
 	if (bind == 0 || (bind == 2 && !sym[i].st_value))
 		ret = ft_tolower(ret);

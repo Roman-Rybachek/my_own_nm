@@ -19,7 +19,7 @@ ELF = 				elf/
 
 HEADERS =			my_own_nm.h
 
-FLAGS_OBJ = 		-c  -I.
+FLAGS_OBJ = 		-c -I.
 FLAGS_BIN =			-I. -o $(NAME)
 
 SRC = 				my_own_nm.c \

@@ -13,6 +13,8 @@ int 	error_return(void *file, int fd, struct stat info, const char *err)
 
 static void 	print_table(char **table)
 {
+	if (!table || !*table)
+		return ;
 	for (int i = 0; table[i]; ++i) {
 		printf("%s\n", table[i]);
 		free(table[i]);
