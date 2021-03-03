@@ -26,7 +26,8 @@ static char *createOutput(char **adr, char symbolType, char **name)
 {
 	char *str;
 
-	str = malloc(strlen(*adr) + 3 + strlen(*name) + 1);
+	if (!(str = malloc(strlen(*adr) + 3 + strlen(*name) + 1)))
+        exit(1);
 	str[strlen(*adr) + 3 + strlen(*name)] = '\0';
 	memcpy(str, *adr, 16);
 	memcpy(str + 16, "   ", 3);

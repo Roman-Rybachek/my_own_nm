@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/rinne/School42/other/my_own_nm/my_own_nm.c
+my_own_nm.h
+/home/rinne/School42/other/my_own_nm/my_own_nm.h
+
+/home/rinne/School42/other/my_own_nm/my_own_nm.h
+stdio.h
+-
+stdlib.h
+-
+sys/types.h
+-
+sys/stat.h
+-
+fcntl.h
+-
+unistd.h
+-
+sys/mman.h
+-
+elf.h
+-
+string.h
+-
+

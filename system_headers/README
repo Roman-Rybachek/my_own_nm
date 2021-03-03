@@ -1,0 +1,3 @@
+This is not my headers. This is system headers, that needs for cross-platform.
+Just i doubt that macos has headers for elf, and that linux has headers for macho.
+The file elf.h i get from Linus Torwalds github :)

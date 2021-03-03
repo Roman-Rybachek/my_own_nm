@@ -43,3 +43,24 @@ int			ft_darr_len(char **arr)
 	}
 	return (height);
 }
+
+char **add_to_darr(char ***darr, char *add)
+{
+	char **new_darr = NULL;
+
+	if (!darr || !*darr)
+	{
+ 		if (!(new_darr = (char**)malloc(2)))
+			return (NULL);
+		new_darr[0] = add;
+		new_darr[1] = NULL;
+		return (new_darr);
+	}
+	else if (!(new_darr = (char**)malloc(ft_darr_len(*darr) + 2)))
+		return (NULL);
+	for (int i = 0; i < ft_darr_len(*darr); i++)
+		new_darr[i] = (*darr)[i];
+	new_darr[ft_darr_len(*darr)] = add;
+	new_darr[ft_darr_len(*darr) + 1] = NULL;
+	return(new_darr);
+}

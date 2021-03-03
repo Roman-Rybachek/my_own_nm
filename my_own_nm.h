@@ -5,6 +5,7 @@
 #ifndef MY_OWN_NM_H
 # define MY_OWN_NM_H
 
+# include "system_headers/elf.h"
 # include <stdio.h>
 # include <stdlib.h>
 # include <sys/types.h>
@@ -12,7 +13,6 @@
 # include <fcntl.h>
 # include <unistd.h>
 # include <sys/mman.h>
-# include <elf.h>
 # include <string.h>
 
 typedef struct		s_list
@@ -37,9 +37,10 @@ int					ft_darr_len(char **arr);
 int					cmpadr(char *s1, char *s2);
 int					cmpname(char *s1, char *s2);
 void 				sort(char **table, int(*cmp)(char*, char*));
-void 				get_prog_name(int argc, char **argv, int *fd);
+char**			get_bin_files(int argc, char **argv, int *fd);
 int 				find_option(int argc, char **argv, char option);
 int					ft_tolower(int c);
+char				**add_to_darr(char ***darr, char *add);
 
 
 

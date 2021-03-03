@@ -1,7 +1,9 @@
 #include "my_own_nm.h"
 
-void 	get_prog_name(int argc, char **argv, int *fd)
+char **get_bin_files(int argc, char **argv, int *fd)
 {
+	char **files = NULL;
+
 	if (argc < 2)
 	{
 		printf("%s\n", "error: bad number of arguments");
@@ -10,16 +12,18 @@ void 	get_prog_name(int argc, char **argv, int *fd)
 	for (int i = 1; i < argc; ++i) {
 		if (argv[i][0] != '-')
 		{
-			if ((*fd = open(argv[i], O_RDONLY)) < 0)
-			{
-				printf("%s\n", "error: bad argument");
-				exit(1);
-			}
-			return ;
+			files = add_to_darr(&files, argv[i]);
+			if (!files)
+				return (NULL);
+			// if ((*fd = open(argv[i], O_RDONLY)) < 0)
+			// {
+			// 	printf("%s\n", "error: bad argument");
+			// 	exit(1);
+			// }
+			// return ;
 		}
 	}
-	printf("%s\n", "error: no program name");
-	exit(1);
+	return (files);
 }
 
 int 	find_option(int argc, char **argv, char option)
