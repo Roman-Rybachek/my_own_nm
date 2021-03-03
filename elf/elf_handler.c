@@ -29,7 +29,10 @@ static char *createOutput(char **adr, char symbolType, char **name)
 	if (!(str = malloc(strlen(*adr) + 3 + strlen(*name) + 1)))
         exit(1);
 	str[strlen(*adr) + 3 + strlen(*name)] = '\0';
-	memcpy(str, *adr, 16);
+	if (!strchr("U", symbolType))
+		memcpy(str, *adr, 16);
+	else
+		memset(str, ' ', 16);
 	memcpy(str + 16, "   ", 3);
 	str[17] = symbolType;
 	memcpy(str + 19, *name, strlen(*name));

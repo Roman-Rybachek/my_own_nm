@@ -5,7 +5,8 @@
 #ifndef MY_OWN_NM_H
 # define MY_OWN_NM_H
 
-# include "system_headers/elf.h"
+// # include "system_headers/elf.h"
+# include <elf.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <sys/types.h>
