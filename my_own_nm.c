@@ -21,6 +21,20 @@ static void 	print_table(char **table)
 	}
 }
 
+void	select_handler(void *file, int argc, char **argv)
+{
+	char 		**table = NULL;
+
+	// if (is_arch(file))
+
+	if (is_elf(file))
+		table = elf_handler(file);
+	sort(table, cmpname);
+	if (find_option(argc, argv, 'n'))
+		sort(table, cmpadr);
+	print_table(table);
+	free(table);
+}
 
 int		main(int argc, char **argv)
 {
@@ -51,13 +65,7 @@ int		main(int argc, char **argv)
 		if (file == MAP_FAILED)
 			error_return(file, fd, info,"error: mmap error");
 	// Сделать обработку arch файлов
-		if (is_elf(file))
-			table = elf_handler(file);
-		sort(table, cmpname);
-		if (find_option(argc, argv, 'n'))
-			sort(table, cmpadr);
-		print_table(table);
-		free(table);
+		select_handler(file, argc, argv);
 		munmap(file, info.st_size);
 		close(fd);
 	}

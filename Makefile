@@ -6,7 +6,7 @@
 #    By: jeldora <jeldora@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/07 19:36:23 by jeldora           #+#    #+#              #
-#    Updated: 2020/09/03 01:58:26 by jeldora          ###   ########.fr        #
+#    Updated: 2021/03/03 07:08:29 by jeldora          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ SRC = 				my_own_nm.c \
 					$(UTILS_SRCS)lists.c \
 					$(UTILS_SRCS)argv_handler.c \
 					$(UTILS_SRCS)sort.c \
+					$(UTILS_SRCS)arch_system_v.c
 
 
 

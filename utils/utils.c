@@ -9,6 +9,14 @@ int 		is_elf(void *void_pointer)
 		return (1);
 	return (0);
 }
+
+int			is_arch(void *void_pointer)
+{
+	if (!strncmp("!<arch>", (char*)void_pointer, 7))
+		return (1);
+	return (0);
+}
+
 Elf64_Shdr	*getSHdr(void *PtrToELF, int index)
 {
 	Elf64_Ehdr *elf_header;
@@ -20,6 +28,7 @@ Elf64_Shdr	*getSHdr(void *PtrToELF, int index)
 	section = &(section_array[index]);
 	return (section);
 }
+
 char		*getSName(void *PtrToElf, int index)
 {
 	Elf64_Ehdr *elf_header;
@@ -31,6 +40,7 @@ char		*getSName(void *PtrToElf, int index)
 	name = PtrToElf + getSHdr(PtrToElf, elf_header->e_shstrndx)->sh_offset + section->sh_name;
 	return name;
 }
+
 int			ft_darr_len(char **arr)
 {
 	int height;

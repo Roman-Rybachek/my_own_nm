@@ -28,7 +28,9 @@ void				ft_lstadd_back(t_list **lst, t_list *new);
 void 				ft_lst_clear(t_list **list);
 int					ft_lstsize(t_list *lst);
 
+int					is_arch(void *void_pointer);
 int 				is_elf(void *p);
+
 char				**elf_handler(void *file);
 Elf64_Shdr			*getSHdr(void *PtrToELF, int index);
 char				*getSName(void *PtrToElf, int index);
