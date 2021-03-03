@@ -38,7 +38,7 @@ int		main(int argc, char **argv)
 	for (int i = 0; i < ft_darr_len(files); i++)
 	{
 
-		if ((fd = open(argv[i], O_RDONLY)) < 0)
+		if ((fd = open(files[i], O_RDONLY)) < 0)
 		{
 			printf("%s\n", "error: bad argument");
 			continue ;
