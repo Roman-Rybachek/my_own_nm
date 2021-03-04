@@ -14,3 +14,30 @@
 	3. Отдаем этот указатель в обработчик. Перепрыгиваем на это число байт и идем дальше.
 */
 
+static int	handle_file(char *p, char *names, int names_len)
+{
+	int ret_len = 0;
+	char *name = NULL;
+
+	if (names)
+	{
+		name = ft_substr(names + atoi(p), strchr(names + atoi(p), '/'));
+		printf("\n%s:\n", name);
+
+		free(name);
+	}
+}
+
+void			arch_handler(void *file)
+{
+	char	*long_names = NULL;
+	char	*p = (char*)file;
+	int 	len_long_names = 0;
+
+	if (!strncmp("//", p + 8, 2))
+	{
+		len_long_names = atoi(p + 56);
+		long_names = p + 68;
+		p = p + 68 + len_long_names;
+	}
+}

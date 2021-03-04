@@ -31,6 +31,8 @@ int					ft_lstsize(t_list *lst);
 int					is_arch(void *void_pointer);
 int 				is_elf(void *p);
 
+void				arch_handler(void *file);
+
 char				**elf_handler(void *file);
 Elf64_Shdr			*getSHdr(void *PtrToELF, int index);
 char				*getSName(void *PtrToElf, int index);
@@ -44,7 +46,7 @@ char**			get_bin_files(int argc, char **argv, int *fd);
 int 				find_option(int argc, char **argv, char option);
 int					ft_tolower(int c);
 char				**add_to_darr(char ***darr, char *add);
-
+char				*ft_substr(char const *s, unsigned int start, size_t len);
 
 
 int					elf_sym_d(Elf64_Shdr *sec);
