@@ -6,7 +6,7 @@
 #    By: jeldora <jeldora@student.21-school.ru>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/07 19:36:23 by jeldora           #+#    #+#              #
-#    Updated: 2021/03/03 07:08:29 by jeldora          ###   ########.fr        #
+#    Updated: 2021/03/15 05:26:48 by jeldora          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,37 +14,38 @@ NAME = 				my_own_nm
 
 # LIBFT =			libft/libft.a
 
-UTILS_SRCS =		utils/
-ELF = 				elf/
+UTILS_DIR =			utils
+ELF_DIR = 			elf
 
-HEADERS =			my_own_nm.h
+HEADERS =			my_own_nm.h shared.h $(ELF_DIR)/elf_header.h
 
-FLAGS_OBJ = 		-c -I.
-FLAGS_BIN =			-I. -o $(NAME)
+FLAGS = 			-I. -I$(ELF_DIR) -I$(UTILS_DIR)
 
-SRC = 				my_own_nm.c \
-					$(ELF)elf_handler.c \
-					$(ELF)elf_symbols.c \
-					$(UTILS_SRCS)utils.c \
-					$(UTILS_SRCS)ft_itoa_hex.c \
-					$(UTILS_SRCS)lists.c \
-					$(UTILS_SRCS)argv_handler.c \
-					$(UTILS_SRCS)sort.c \
-					$(UTILS_SRCS)arch_system_v.c
+ELF_HANDLER_SRC =	$(ELF_DIR)/elf_handler.c \
+					$(ELF_DIR)/elf_symbols.c \
+					$(ELF_DIR)/elf_utils.c
 
+UTILS_SRCS = 		$(UTILS_DIR)/utils.c \
+             		$(UTILS_DIR)/ft_itoa_hex.c \
+             		$(UTILS_DIR)/lists.c \
+             		$(UTILS_DIR)/argv_handler.c \
+             		$(UTILS_DIR)/sort.c
 
-
-
+SRC = 				$(UTILS_SRCS) \
+					$(ELF_HANDLER_SRC) \
+					my_own_nm.c
+					# $(UTILS_SRCS)/arch_system_v.c
 
 OBJ =			$(SRC:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ) $(HEADERS)
-	gcc $(OBJ) $(FLAGS_BIN)
+	gcc $(OBJ) $(FLAGS) -o $(NAME)
+
 
 %.o: %.c
-	gcc $(FLAGS_OBJ) $< -o $@
+	gcc $(FLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJ)

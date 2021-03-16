@@ -1,6 +1,6 @@
 #include "my_own_nm.h"
 
-int			cmpadr(char *s1, char *s2)
+int				cmpadr(char *s1, char *s2)
 {
 	int isNull[2];
 
@@ -19,7 +19,6 @@ int			cmpadr(char *s1, char *s2)
 	else
 		return (0);
 }
-
 int				ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
@@ -27,7 +26,6 @@ int				ft_tolower(int c)
 	else
 		return (c);
 }
-
 static int 		is_end(char *t1, char *t2)
 {
 	if (!*t1 && !*t2)
@@ -39,7 +37,6 @@ static int 		is_end(char *t1, char *t2)
 	else
 		return 2;
 }
-
 int				cmpname(char *s1, char *s2)
 {
 	char 	*t1 = s1 + 19;
@@ -63,8 +60,7 @@ int				cmpname(char *s1, char *s2)
 		return (is_end(t1, t2));
 	return (0);
 }
-
-void 		sort(char **table, int(*cmp)(char*, char*))
+void 			sort(char **table, int(*cmp)(char*, char*))
 {
 	char	*tmp		= NULL;
 	int 	len			= ft_darr_len(table);

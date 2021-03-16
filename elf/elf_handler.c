@@ -1,4 +1,4 @@
-#include "my_own_nm.h"
+#include "elf_header.h"
 
 static char *fillAddr(Elf64_Addr value)
 {

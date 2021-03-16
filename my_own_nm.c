@@ -10,7 +10,6 @@ int 	error_return(void *file, int fd, struct stat info, const char *err)
 		close(fd);
 	exit(1);
 }
-
 static void 	print_table(char **table)
 {
 	if (!table || !*table)
@@ -20,7 +19,6 @@ static void 	print_table(char **table)
 		free(table[i]);
 	}
 }
-
 void	select_handler(void *file, int argc, char **argv)
 {
 	char 		**table = NULL;
@@ -29,13 +27,14 @@ void	select_handler(void *file, int argc, char **argv)
 
 	if (is_elf(file))
 		table = elf_handler(file);
+//	else if (is_pe(file))
+//		table = pe_handler(file);
 	sort(table, cmpname);
 	if (find_option(argc, argv, 'n'))
 		sort(table, cmpadr);
 	print_table(table);
 	free(table);
 }
-
 int		main(int argc, char **argv)
 {
 	int			fd;

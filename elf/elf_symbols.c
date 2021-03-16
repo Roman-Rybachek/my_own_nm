@@ -1,4 +1,4 @@
-#include "my_own_nm.h"
+#include "elf_header.h"
 
 int		elf_sym_d(Elf64_Shdr *sec)
 {
@@ -6,7 +6,6 @@ int		elf_sym_d(Elf64_Shdr *sec)
 		return (1);
 	return (0);
 }
-
 int 	elf_sym_t(char *name, Elf64_Shdr *sec)
 {
 	if (!strcmp(name, ".text"))
@@ -15,7 +14,6 @@ int 	elf_sym_t(char *name, Elf64_Shdr *sec)
 		return (1);
 	return (0);
 }
-
 int 	elf_sym_r(Elf64_Shdr *sec)
 {
 	if ((sec->sh_flags & 1) || (sec->sh_flags & 4))
@@ -24,7 +22,6 @@ int 	elf_sym_r(Elf64_Shdr *sec)
 		return (1);
 	return (0);
 }
-
 void 	elf_all_sym_info(void *file, Elf64_Shdr *sec, Elf64_Sym sym)
 {
 	printf("Symbol:\n");
