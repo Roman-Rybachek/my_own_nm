@@ -90,48 +90,22 @@ CMakeFiles/my_own_nm.dir/my_own_nm.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/my_own_nm.dir/my_own_nm.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/rinne/School42/other/my_own_nm/my_own_nm.c -o CMakeFiles/my_own_nm.dir/my_own_nm.c.s
 
-CMakeFiles/my_own_nm.dir/elf/elf_handler.c.o: CMakeFiles/my_own_nm.dir/flags.make
-CMakeFiles/my_own_nm.dir/elf/elf_handler.c.o: ../elf/elf_handler.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rinne/School42/other/my_own_nm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/my_own_nm.dir/elf/elf_handler.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/my_own_nm.dir/elf/elf_handler.c.o   -c /home/rinne/School42/other/my_own_nm/elf/elf_handler.c
+CMakeFiles/my_own_nm.dir/utils/argv_handler.c.o: CMakeFiles/my_own_nm.dir/flags.make
+CMakeFiles/my_own_nm.dir/utils/argv_handler.c.o: ../utils/argv_handler.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rinne/School42/other/my_own_nm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/my_own_nm.dir/utils/argv_handler.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/my_own_nm.dir/utils/argv_handler.c.o   -c /home/rinne/School42/other/my_own_nm/utils/argv_handler.c
 
-CMakeFiles/my_own_nm.dir/elf/elf_handler.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/my_own_nm.dir/elf/elf_handler.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/rinne/School42/other/my_own_nm/elf/elf_handler.c > CMakeFiles/my_own_nm.dir/elf/elf_handler.c.i
+CMakeFiles/my_own_nm.dir/utils/argv_handler.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/my_own_nm.dir/utils/argv_handler.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/rinne/School42/other/my_own_nm/utils/argv_handler.c > CMakeFiles/my_own_nm.dir/utils/argv_handler.c.i
 
-CMakeFiles/my_own_nm.dir/elf/elf_handler.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/my_own_nm.dir/elf/elf_handler.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/rinne/School42/other/my_own_nm/elf/elf_handler.c -o CMakeFiles/my_own_nm.dir/elf/elf_handler.c.s
-
-CMakeFiles/my_own_nm.dir/elf/elf_symbols.c.o: CMakeFiles/my_own_nm.dir/flags.make
-CMakeFiles/my_own_nm.dir/elf/elf_symbols.c.o: ../elf/elf_symbols.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rinne/School42/other/my_own_nm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/my_own_nm.dir/elf/elf_symbols.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/my_own_nm.dir/elf/elf_symbols.c.o   -c /home/rinne/School42/other/my_own_nm/elf/elf_symbols.c
-
-CMakeFiles/my_own_nm.dir/elf/elf_symbols.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/my_own_nm.dir/elf/elf_symbols.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/rinne/School42/other/my_own_nm/elf/elf_symbols.c > CMakeFiles/my_own_nm.dir/elf/elf_symbols.c.i
-
-CMakeFiles/my_own_nm.dir/elf/elf_symbols.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/my_own_nm.dir/elf/elf_symbols.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/rinne/School42/other/my_own_nm/elf/elf_symbols.c -o CMakeFiles/my_own_nm.dir/elf/elf_symbols.c.s
-
-CMakeFiles/my_own_nm.dir/utils/utils.c.o: CMakeFiles/my_own_nm.dir/flags.make
-CMakeFiles/my_own_nm.dir/utils/utils.c.o: ../utils/utils.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rinne/School42/other/my_own_nm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/my_own_nm.dir/utils/utils.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/my_own_nm.dir/utils/utils.c.o   -c /home/rinne/School42/other/my_own_nm/utils/utils.c
-
-CMakeFiles/my_own_nm.dir/utils/utils.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/my_own_nm.dir/utils/utils.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/rinne/School42/other/my_own_nm/utils/utils.c > CMakeFiles/my_own_nm.dir/utils/utils.c.i
-
-CMakeFiles/my_own_nm.dir/utils/utils.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/my_own_nm.dir/utils/utils.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/rinne/School42/other/my_own_nm/utils/utils.c -o CMakeFiles/my_own_nm.dir/utils/utils.c.s
+CMakeFiles/my_own_nm.dir/utils/argv_handler.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/my_own_nm.dir/utils/argv_handler.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/rinne/School42/other/my_own_nm/utils/argv_handler.c -o CMakeFiles/my_own_nm.dir/utils/argv_handler.c.s
 
 CMakeFiles/my_own_nm.dir/utils/ft_itoa_hex.c.o: CMakeFiles/my_own_nm.dir/flags.make
 CMakeFiles/my_own_nm.dir/utils/ft_itoa_hex.c.o: ../utils/ft_itoa_hex.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rinne/School42/other/my_own_nm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/my_own_nm.dir/utils/ft_itoa_hex.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rinne/School42/other/my_own_nm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/my_own_nm.dir/utils/ft_itoa_hex.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/my_own_nm.dir/utils/ft_itoa_hex.c.o   -c /home/rinne/School42/other/my_own_nm/utils/ft_itoa_hex.c
 
 CMakeFiles/my_own_nm.dir/utils/ft_itoa_hex.c.i: cmake_force
@@ -144,7 +118,7 @@ CMakeFiles/my_own_nm.dir/utils/ft_itoa_hex.c.s: cmake_force
 
 CMakeFiles/my_own_nm.dir/utils/lists.c.o: CMakeFiles/my_own_nm.dir/flags.make
 CMakeFiles/my_own_nm.dir/utils/lists.c.o: ../utils/lists.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rinne/School42/other/my_own_nm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/my_own_nm.dir/utils/lists.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rinne/School42/other/my_own_nm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/my_own_nm.dir/utils/lists.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/my_own_nm.dir/utils/lists.c.o   -c /home/rinne/School42/other/my_own_nm/utils/lists.c
 
 CMakeFiles/my_own_nm.dir/utils/lists.c.i: cmake_force
@@ -157,7 +131,7 @@ CMakeFiles/my_own_nm.dir/utils/lists.c.s: cmake_force
 
 CMakeFiles/my_own_nm.dir/utils/sort.c.o: CMakeFiles/my_own_nm.dir/flags.make
 CMakeFiles/my_own_nm.dir/utils/sort.c.o: ../utils/sort.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rinne/School42/other/my_own_nm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/my_own_nm.dir/utils/sort.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rinne/School42/other/my_own_nm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/my_own_nm.dir/utils/sort.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/my_own_nm.dir/utils/sort.c.o   -c /home/rinne/School42/other/my_own_nm/utils/sort.c
 
 CMakeFiles/my_own_nm.dir/utils/sort.c.i: cmake_force
@@ -168,44 +142,130 @@ CMakeFiles/my_own_nm.dir/utils/sort.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/my_own_nm.dir/utils/sort.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/rinne/School42/other/my_own_nm/utils/sort.c -o CMakeFiles/my_own_nm.dir/utils/sort.c.s
 
-CMakeFiles/my_own_nm.dir/utils/argv_handler.c.o: CMakeFiles/my_own_nm.dir/flags.make
-CMakeFiles/my_own_nm.dir/utils/argv_handler.c.o: ../utils/argv_handler.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rinne/School42/other/my_own_nm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/my_own_nm.dir/utils/argv_handler.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/my_own_nm.dir/utils/argv_handler.c.o   -c /home/rinne/School42/other/my_own_nm/utils/argv_handler.c
+CMakeFiles/my_own_nm.dir/utils/utils.c.o: CMakeFiles/my_own_nm.dir/flags.make
+CMakeFiles/my_own_nm.dir/utils/utils.c.o: ../utils/utils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rinne/School42/other/my_own_nm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/my_own_nm.dir/utils/utils.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/my_own_nm.dir/utils/utils.c.o   -c /home/rinne/School42/other/my_own_nm/utils/utils.c
 
-CMakeFiles/my_own_nm.dir/utils/argv_handler.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/my_own_nm.dir/utils/argv_handler.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/rinne/School42/other/my_own_nm/utils/argv_handler.c > CMakeFiles/my_own_nm.dir/utils/argv_handler.c.i
+CMakeFiles/my_own_nm.dir/utils/utils.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/my_own_nm.dir/utils/utils.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/rinne/School42/other/my_own_nm/utils/utils.c > CMakeFiles/my_own_nm.dir/utils/utils.c.i
 
-CMakeFiles/my_own_nm.dir/utils/argv_handler.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/my_own_nm.dir/utils/argv_handler.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/rinne/School42/other/my_own_nm/utils/argv_handler.c -o CMakeFiles/my_own_nm.dir/utils/argv_handler.c.s
+CMakeFiles/my_own_nm.dir/utils/utils.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/my_own_nm.dir/utils/utils.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/rinne/School42/other/my_own_nm/utils/utils.c -o CMakeFiles/my_own_nm.dir/utils/utils.c.s
+
+CMakeFiles/my_own_nm.dir/utils/utils2.c.o: CMakeFiles/my_own_nm.dir/flags.make
+CMakeFiles/my_own_nm.dir/utils/utils2.c.o: ../utils/utils2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rinne/School42/other/my_own_nm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/my_own_nm.dir/utils/utils2.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/my_own_nm.dir/utils/utils2.c.o   -c /home/rinne/School42/other/my_own_nm/utils/utils2.c
+
+CMakeFiles/my_own_nm.dir/utils/utils2.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/my_own_nm.dir/utils/utils2.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/rinne/School42/other/my_own_nm/utils/utils2.c > CMakeFiles/my_own_nm.dir/utils/utils2.c.i
+
+CMakeFiles/my_own_nm.dir/utils/utils2.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/my_own_nm.dir/utils/utils2.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/rinne/School42/other/my_own_nm/utils/utils2.c -o CMakeFiles/my_own_nm.dir/utils/utils2.c.s
+
+CMakeFiles/my_own_nm.dir/elf_srcs/elf_handler.c.o: CMakeFiles/my_own_nm.dir/flags.make
+CMakeFiles/my_own_nm.dir/elf_srcs/elf_handler.c.o: ../elf_srcs/elf_handler.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rinne/School42/other/my_own_nm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/my_own_nm.dir/elf_srcs/elf_handler.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/my_own_nm.dir/elf_srcs/elf_handler.c.o   -c /home/rinne/School42/other/my_own_nm/elf_srcs/elf_handler.c
+
+CMakeFiles/my_own_nm.dir/elf_srcs/elf_handler.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/my_own_nm.dir/elf_srcs/elf_handler.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/rinne/School42/other/my_own_nm/elf_srcs/elf_handler.c > CMakeFiles/my_own_nm.dir/elf_srcs/elf_handler.c.i
+
+CMakeFiles/my_own_nm.dir/elf_srcs/elf_handler.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/my_own_nm.dir/elf_srcs/elf_handler.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/rinne/School42/other/my_own_nm/elf_srcs/elf_handler.c -o CMakeFiles/my_own_nm.dir/elf_srcs/elf_handler.c.s
+
+CMakeFiles/my_own_nm.dir/elf_srcs/elf_utils.c.o: CMakeFiles/my_own_nm.dir/flags.make
+CMakeFiles/my_own_nm.dir/elf_srcs/elf_utils.c.o: ../elf_srcs/elf_utils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rinne/School42/other/my_own_nm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/my_own_nm.dir/elf_srcs/elf_utils.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/my_own_nm.dir/elf_srcs/elf_utils.c.o   -c /home/rinne/School42/other/my_own_nm/elf_srcs/elf_utils.c
+
+CMakeFiles/my_own_nm.dir/elf_srcs/elf_utils.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/my_own_nm.dir/elf_srcs/elf_utils.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/rinne/School42/other/my_own_nm/elf_srcs/elf_utils.c > CMakeFiles/my_own_nm.dir/elf_srcs/elf_utils.c.i
+
+CMakeFiles/my_own_nm.dir/elf_srcs/elf_utils.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/my_own_nm.dir/elf_srcs/elf_utils.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/rinne/School42/other/my_own_nm/elf_srcs/elf_utils.c -o CMakeFiles/my_own_nm.dir/elf_srcs/elf_utils.c.s
+
+CMakeFiles/my_own_nm.dir/elf_srcs/elf_symbols.c.o: CMakeFiles/my_own_nm.dir/flags.make
+CMakeFiles/my_own_nm.dir/elf_srcs/elf_symbols.c.o: ../elf_srcs/elf_symbols.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rinne/School42/other/my_own_nm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/my_own_nm.dir/elf_srcs/elf_symbols.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/my_own_nm.dir/elf_srcs/elf_symbols.c.o   -c /home/rinne/School42/other/my_own_nm/elf_srcs/elf_symbols.c
+
+CMakeFiles/my_own_nm.dir/elf_srcs/elf_symbols.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/my_own_nm.dir/elf_srcs/elf_symbols.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/rinne/School42/other/my_own_nm/elf_srcs/elf_symbols.c > CMakeFiles/my_own_nm.dir/elf_srcs/elf_symbols.c.i
+
+CMakeFiles/my_own_nm.dir/elf_srcs/elf_symbols.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/my_own_nm.dir/elf_srcs/elf_symbols.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/rinne/School42/other/my_own_nm/elf_srcs/elf_symbols.c -o CMakeFiles/my_own_nm.dir/elf_srcs/elf_symbols.c.s
+
+CMakeFiles/my_own_nm.dir/pe_srcs/pe_handler.c.o: CMakeFiles/my_own_nm.dir/flags.make
+CMakeFiles/my_own_nm.dir/pe_srcs/pe_handler.c.o: ../pe_srcs/pe_handler.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rinne/School42/other/my_own_nm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/my_own_nm.dir/pe_srcs/pe_handler.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/my_own_nm.dir/pe_srcs/pe_handler.c.o   -c /home/rinne/School42/other/my_own_nm/pe_srcs/pe_handler.c
+
+CMakeFiles/my_own_nm.dir/pe_srcs/pe_handler.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/my_own_nm.dir/pe_srcs/pe_handler.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/rinne/School42/other/my_own_nm/pe_srcs/pe_handler.c > CMakeFiles/my_own_nm.dir/pe_srcs/pe_handler.c.i
+
+CMakeFiles/my_own_nm.dir/pe_srcs/pe_handler.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/my_own_nm.dir/pe_srcs/pe_handler.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/rinne/School42/other/my_own_nm/pe_srcs/pe_handler.c -o CMakeFiles/my_own_nm.dir/pe_srcs/pe_handler.c.s
+
+CMakeFiles/my_own_nm.dir/pe_srcs/pe_utils.c.o: CMakeFiles/my_own_nm.dir/flags.make
+CMakeFiles/my_own_nm.dir/pe_srcs/pe_utils.c.o: ../pe_srcs/pe_utils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/rinne/School42/other/my_own_nm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/my_own_nm.dir/pe_srcs/pe_utils.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/my_own_nm.dir/pe_srcs/pe_utils.c.o   -c /home/rinne/School42/other/my_own_nm/pe_srcs/pe_utils.c
+
+CMakeFiles/my_own_nm.dir/pe_srcs/pe_utils.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/my_own_nm.dir/pe_srcs/pe_utils.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/rinne/School42/other/my_own_nm/pe_srcs/pe_utils.c > CMakeFiles/my_own_nm.dir/pe_srcs/pe_utils.c.i
+
+CMakeFiles/my_own_nm.dir/pe_srcs/pe_utils.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/my_own_nm.dir/pe_srcs/pe_utils.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/rinne/School42/other/my_own_nm/pe_srcs/pe_utils.c -o CMakeFiles/my_own_nm.dir/pe_srcs/pe_utils.c.s
 
 # Object files for target my_own_nm
 my_own_nm_OBJECTS = \
 "CMakeFiles/my_own_nm.dir/my_own_nm.c.o" \
-"CMakeFiles/my_own_nm.dir/elf/elf_handler.c.o" \
-"CMakeFiles/my_own_nm.dir/elf/elf_symbols.c.o" \
-"CMakeFiles/my_own_nm.dir/utils/utils.c.o" \
+"CMakeFiles/my_own_nm.dir/utils/argv_handler.c.o" \
 "CMakeFiles/my_own_nm.dir/utils/ft_itoa_hex.c.o" \
 "CMakeFiles/my_own_nm.dir/utils/lists.c.o" \
 "CMakeFiles/my_own_nm.dir/utils/sort.c.o" \
-"CMakeFiles/my_own_nm.dir/utils/argv_handler.c.o"
+"CMakeFiles/my_own_nm.dir/utils/utils.c.o" \
+"CMakeFiles/my_own_nm.dir/utils/utils2.c.o" \
+"CMakeFiles/my_own_nm.dir/elf_srcs/elf_handler.c.o" \
+"CMakeFiles/my_own_nm.dir/elf_srcs/elf_utils.c.o" \
+"CMakeFiles/my_own_nm.dir/elf_srcs/elf_symbols.c.o" \
+"CMakeFiles/my_own_nm.dir/pe_srcs/pe_handler.c.o" \
+"CMakeFiles/my_own_nm.dir/pe_srcs/pe_utils.c.o"
 
 # External object files for target my_own_nm
 my_own_nm_EXTERNAL_OBJECTS =
 
 my_own_nm: CMakeFiles/my_own_nm.dir/my_own_nm.c.o
-my_own_nm: CMakeFiles/my_own_nm.dir/elf/elf_handler.c.o
-my_own_nm: CMakeFiles/my_own_nm.dir/elf/elf_symbols.c.o
-my_own_nm: CMakeFiles/my_own_nm.dir/utils/utils.c.o
+my_own_nm: CMakeFiles/my_own_nm.dir/utils/argv_handler.c.o
 my_own_nm: CMakeFiles/my_own_nm.dir/utils/ft_itoa_hex.c.o
 my_own_nm: CMakeFiles/my_own_nm.dir/utils/lists.c.o
 my_own_nm: CMakeFiles/my_own_nm.dir/utils/sort.c.o
-my_own_nm: CMakeFiles/my_own_nm.dir/utils/argv_handler.c.o
+my_own_nm: CMakeFiles/my_own_nm.dir/utils/utils.c.o
+my_own_nm: CMakeFiles/my_own_nm.dir/utils/utils2.c.o
+my_own_nm: CMakeFiles/my_own_nm.dir/elf_srcs/elf_handler.c.o
+my_own_nm: CMakeFiles/my_own_nm.dir/elf_srcs/elf_utils.c.o
+my_own_nm: CMakeFiles/my_own_nm.dir/elf_srcs/elf_symbols.c.o
+my_own_nm: CMakeFiles/my_own_nm.dir/pe_srcs/pe_handler.c.o
+my_own_nm: CMakeFiles/my_own_nm.dir/pe_srcs/pe_utils.c.o
 my_own_nm: CMakeFiles/my_own_nm.dir/build.make
 my_own_nm: CMakeFiles/my_own_nm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rinne/School42/other/my_own_nm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C executable my_own_nm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/rinne/School42/other/my_own_nm/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking C executable my_own_nm"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/my_own_nm.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

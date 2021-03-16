@@ -45,6 +45,9 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/rinne/School42/other/my_own_nm/."/>
+					<Add directory="/home/rinne/School42/other/my_own_nm/system_headers"/>
+					<Add directory="/home/rinne/School42/other/my_own_nm/elf_srcs"/>
+					<Add directory="/home/rinne/School42/other/my_own_nm/pe_srcs"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -68,6 +71,9 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/rinne/School42/other/my_own_nm/."/>
+					<Add directory="/home/rinne/School42/other/my_own_nm/system_headers"/>
+					<Add directory="/home/rinne/School42/other/my_own_nm/elf_srcs"/>
+					<Add directory="/home/rinne/School42/other/my_own_nm/pe_srcs"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -84,16 +90,25 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/rinne/School42/other/my_own_nm/elf/elf_handler.c">
+		<Unit filename="/home/rinne/School42/other/my_own_nm/elf_srcs/elf_handler.c">
 			<Option target="my_own_nm"/>
 		</Unit>
-		<Unit filename="/home/rinne/School42/other/my_own_nm/elf/elf_symbols.c">
+		<Unit filename="/home/rinne/School42/other/my_own_nm/elf_srcs/elf_symbols.c">
+			<Option target="my_own_nm"/>
+		</Unit>
+		<Unit filename="/home/rinne/School42/other/my_own_nm/elf_srcs/elf_utils.c">
 			<Option target="my_own_nm"/>
 		</Unit>
 		<Unit filename="/home/rinne/School42/other/my_own_nm/my_own_nm.c">
 			<Option target="my_own_nm"/>
 		</Unit>
 		<Unit filename="/home/rinne/School42/other/my_own_nm/my_own_nm.h">
+			<Option target="my_own_nm"/>
+		</Unit>
+		<Unit filename="/home/rinne/School42/other/my_own_nm/pe_srcs/pe_handler.c">
+			<Option target="my_own_nm"/>
+		</Unit>
+		<Unit filename="/home/rinne/School42/other/my_own_nm/pe_srcs/pe_utils.c">
 			<Option target="my_own_nm"/>
 		</Unit>
 		<Unit filename="/home/rinne/School42/other/my_own_nm/utils/argv_handler.c">
@@ -109,6 +124,9 @@
 			<Option target="my_own_nm"/>
 		</Unit>
 		<Unit filename="/home/rinne/School42/other/my_own_nm/utils/utils.c">
+			<Option target="my_own_nm"/>
+		</Unit>
+		<Unit filename="/home/rinne/School42/other/my_own_nm/utils/utils2.c">
 			<Option target="my_own_nm"/>
 		</Unit>
 		<Unit filename="/home/rinne/School42/other/my_own_nm/CMakeLists.txt">

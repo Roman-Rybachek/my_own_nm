@@ -143,59 +143,86 @@ my_own_nm/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_own_nm.dir/build.make CMakeFiles/my_own_nm.dir/build
 .PHONY : my_own_nm/fast
 
-elf/elf_handler.o: elf/elf_handler.c.o
+elf_srcs/elf_handler.o: elf_srcs/elf_handler.c.o
 
-.PHONY : elf/elf_handler.o
-
-# target to build an object file
-elf/elf_handler.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_own_nm.dir/build.make CMakeFiles/my_own_nm.dir/elf/elf_handler.c.o
-.PHONY : elf/elf_handler.c.o
-
-elf/elf_handler.i: elf/elf_handler.c.i
-
-.PHONY : elf/elf_handler.i
-
-# target to preprocess a source file
-elf/elf_handler.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_own_nm.dir/build.make CMakeFiles/my_own_nm.dir/elf/elf_handler.c.i
-.PHONY : elf/elf_handler.c.i
-
-elf/elf_handler.s: elf/elf_handler.c.s
-
-.PHONY : elf/elf_handler.s
-
-# target to generate assembly for a file
-elf/elf_handler.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_own_nm.dir/build.make CMakeFiles/my_own_nm.dir/elf/elf_handler.c.s
-.PHONY : elf/elf_handler.c.s
-
-elf/elf_symbols.o: elf/elf_symbols.c.o
-
-.PHONY : elf/elf_symbols.o
+.PHONY : elf_srcs/elf_handler.o
 
 # target to build an object file
-elf/elf_symbols.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_own_nm.dir/build.make CMakeFiles/my_own_nm.dir/elf/elf_symbols.c.o
-.PHONY : elf/elf_symbols.c.o
+elf_srcs/elf_handler.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_own_nm.dir/build.make CMakeFiles/my_own_nm.dir/elf_srcs/elf_handler.c.o
+.PHONY : elf_srcs/elf_handler.c.o
 
-elf/elf_symbols.i: elf/elf_symbols.c.i
+elf_srcs/elf_handler.i: elf_srcs/elf_handler.c.i
 
-.PHONY : elf/elf_symbols.i
+.PHONY : elf_srcs/elf_handler.i
 
 # target to preprocess a source file
-elf/elf_symbols.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_own_nm.dir/build.make CMakeFiles/my_own_nm.dir/elf/elf_symbols.c.i
-.PHONY : elf/elf_symbols.c.i
+elf_srcs/elf_handler.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_own_nm.dir/build.make CMakeFiles/my_own_nm.dir/elf_srcs/elf_handler.c.i
+.PHONY : elf_srcs/elf_handler.c.i
 
-elf/elf_symbols.s: elf/elf_symbols.c.s
+elf_srcs/elf_handler.s: elf_srcs/elf_handler.c.s
 
-.PHONY : elf/elf_symbols.s
+.PHONY : elf_srcs/elf_handler.s
 
 # target to generate assembly for a file
-elf/elf_symbols.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_own_nm.dir/build.make CMakeFiles/my_own_nm.dir/elf/elf_symbols.c.s
-.PHONY : elf/elf_symbols.c.s
+elf_srcs/elf_handler.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_own_nm.dir/build.make CMakeFiles/my_own_nm.dir/elf_srcs/elf_handler.c.s
+.PHONY : elf_srcs/elf_handler.c.s
+
+elf_srcs/elf_symbols.o: elf_srcs/elf_symbols.c.o
+
+.PHONY : elf_srcs/elf_symbols.o
+
+# target to build an object file
+elf_srcs/elf_symbols.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_own_nm.dir/build.make CMakeFiles/my_own_nm.dir/elf_srcs/elf_symbols.c.o
+.PHONY : elf_srcs/elf_symbols.c.o
+
+elf_srcs/elf_symbols.i: elf_srcs/elf_symbols.c.i
+
+.PHONY : elf_srcs/elf_symbols.i
+
+# target to preprocess a source file
+elf_srcs/elf_symbols.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_own_nm.dir/build.make CMakeFiles/my_own_nm.dir/elf_srcs/elf_symbols.c.i
+.PHONY : elf_srcs/elf_symbols.c.i
+
+elf_srcs/elf_symbols.s: elf_srcs/elf_symbols.c.s
+
+.PHONY : elf_srcs/elf_symbols.s
+
+# target to generate assembly for a file
+elf_srcs/elf_symbols.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_own_nm.dir/build.make CMakeFiles/my_own_nm.dir/elf_srcs/elf_symbols.c.s
+.PHONY : elf_srcs/elf_symbols.c.s
+
+elf_srcs/elf_utils.o: elf_srcs/elf_utils.c.o
+
+.PHONY : elf_srcs/elf_utils.o
+
+# target to build an object file
+elf_srcs/elf_utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_own_nm.dir/build.make CMakeFiles/my_own_nm.dir/elf_srcs/elf_utils.c.o
+.PHONY : elf_srcs/elf_utils.c.o
+
+elf_srcs/elf_utils.i: elf_srcs/elf_utils.c.i
+
+.PHONY : elf_srcs/elf_utils.i
+
+# target to preprocess a source file
+elf_srcs/elf_utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_own_nm.dir/build.make CMakeFiles/my_own_nm.dir/elf_srcs/elf_utils.c.i
+.PHONY : elf_srcs/elf_utils.c.i
+
+elf_srcs/elf_utils.s: elf_srcs/elf_utils.c.s
+
+.PHONY : elf_srcs/elf_utils.s
+
+# target to generate assembly for a file
+elf_srcs/elf_utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_own_nm.dir/build.make CMakeFiles/my_own_nm.dir/elf_srcs/elf_utils.c.s
+.PHONY : elf_srcs/elf_utils.c.s
 
 my_own_nm.o: my_own_nm.c.o
 
@@ -223,6 +250,60 @@ my_own_nm.s: my_own_nm.c.s
 my_own_nm.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_own_nm.dir/build.make CMakeFiles/my_own_nm.dir/my_own_nm.c.s
 .PHONY : my_own_nm.c.s
+
+pe_srcs/pe_handler.o: pe_srcs/pe_handler.c.o
+
+.PHONY : pe_srcs/pe_handler.o
+
+# target to build an object file
+pe_srcs/pe_handler.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_own_nm.dir/build.make CMakeFiles/my_own_nm.dir/pe_srcs/pe_handler.c.o
+.PHONY : pe_srcs/pe_handler.c.o
+
+pe_srcs/pe_handler.i: pe_srcs/pe_handler.c.i
+
+.PHONY : pe_srcs/pe_handler.i
+
+# target to preprocess a source file
+pe_srcs/pe_handler.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_own_nm.dir/build.make CMakeFiles/my_own_nm.dir/pe_srcs/pe_handler.c.i
+.PHONY : pe_srcs/pe_handler.c.i
+
+pe_srcs/pe_handler.s: pe_srcs/pe_handler.c.s
+
+.PHONY : pe_srcs/pe_handler.s
+
+# target to generate assembly for a file
+pe_srcs/pe_handler.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_own_nm.dir/build.make CMakeFiles/my_own_nm.dir/pe_srcs/pe_handler.c.s
+.PHONY : pe_srcs/pe_handler.c.s
+
+pe_srcs/pe_utils.o: pe_srcs/pe_utils.c.o
+
+.PHONY : pe_srcs/pe_utils.o
+
+# target to build an object file
+pe_srcs/pe_utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_own_nm.dir/build.make CMakeFiles/my_own_nm.dir/pe_srcs/pe_utils.c.o
+.PHONY : pe_srcs/pe_utils.c.o
+
+pe_srcs/pe_utils.i: pe_srcs/pe_utils.c.i
+
+.PHONY : pe_srcs/pe_utils.i
+
+# target to preprocess a source file
+pe_srcs/pe_utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_own_nm.dir/build.make CMakeFiles/my_own_nm.dir/pe_srcs/pe_utils.c.i
+.PHONY : pe_srcs/pe_utils.c.i
+
+pe_srcs/pe_utils.s: pe_srcs/pe_utils.c.s
+
+.PHONY : pe_srcs/pe_utils.s
+
+# target to generate assembly for a file
+pe_srcs/pe_utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_own_nm.dir/build.make CMakeFiles/my_own_nm.dir/pe_srcs/pe_utils.c.s
+.PHONY : pe_srcs/pe_utils.c.s
 
 utils/argv_handler.o: utils/argv_handler.c.o
 
@@ -359,6 +440,33 @@ utils/utils.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_own_nm.dir/build.make CMakeFiles/my_own_nm.dir/utils/utils.c.s
 .PHONY : utils/utils.c.s
 
+utils/utils2.o: utils/utils2.c.o
+
+.PHONY : utils/utils2.o
+
+# target to build an object file
+utils/utils2.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_own_nm.dir/build.make CMakeFiles/my_own_nm.dir/utils/utils2.c.o
+.PHONY : utils/utils2.c.o
+
+utils/utils2.i: utils/utils2.c.i
+
+.PHONY : utils/utils2.i
+
+# target to preprocess a source file
+utils/utils2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_own_nm.dir/build.make CMakeFiles/my_own_nm.dir/utils/utils2.c.i
+.PHONY : utils/utils2.c.i
+
+utils/utils2.s: utils/utils2.c.s
+
+.PHONY : utils/utils2.s
+
+# target to generate assembly for a file
+utils/utils2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_own_nm.dir/build.make CMakeFiles/my_own_nm.dir/utils/utils2.c.s
+.PHONY : utils/utils2.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -368,15 +476,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... my_own_nm"
-	@echo "... elf/elf_handler.o"
-	@echo "... elf/elf_handler.i"
-	@echo "... elf/elf_handler.s"
-	@echo "... elf/elf_symbols.o"
-	@echo "... elf/elf_symbols.i"
-	@echo "... elf/elf_symbols.s"
+	@echo "... elf_srcs/elf_handler.o"
+	@echo "... elf_srcs/elf_handler.i"
+	@echo "... elf_srcs/elf_handler.s"
+	@echo "... elf_srcs/elf_symbols.o"
+	@echo "... elf_srcs/elf_symbols.i"
+	@echo "... elf_srcs/elf_symbols.s"
+	@echo "... elf_srcs/elf_utils.o"
+	@echo "... elf_srcs/elf_utils.i"
+	@echo "... elf_srcs/elf_utils.s"
 	@echo "... my_own_nm.o"
 	@echo "... my_own_nm.i"
 	@echo "... my_own_nm.s"
+	@echo "... pe_srcs/pe_handler.o"
+	@echo "... pe_srcs/pe_handler.i"
+	@echo "... pe_srcs/pe_handler.s"
+	@echo "... pe_srcs/pe_utils.o"
+	@echo "... pe_srcs/pe_utils.i"
+	@echo "... pe_srcs/pe_utils.s"
 	@echo "... utils/argv_handler.o"
 	@echo "... utils/argv_handler.i"
 	@echo "... utils/argv_handler.s"
@@ -392,6 +509,9 @@ help:
 	@echo "... utils/utils.o"
 	@echo "... utils/utils.i"
 	@echo "... utils/utils.s"
+	@echo "... utils/utils2.o"
+	@echo "... utils/utils2.i"
+	@echo "... utils/utils2.s"
 .PHONY : help
 
 

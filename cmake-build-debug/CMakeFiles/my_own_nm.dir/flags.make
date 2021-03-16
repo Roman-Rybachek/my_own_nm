@@ -6,5 +6,5 @@ C_FLAGS = -g
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/rinne/School42/other/my_own_nm/. 
+C_INCLUDES = -I/home/rinne/School42/other/my_own_nm/. -I/home/rinne/School42/other/my_own_nm/system_headers -I/home/rinne/School42/other/my_own_nm/elf_srcs -I/home/rinne/School42/other/my_own_nm/pe_srcs 
 
