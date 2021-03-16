@@ -22,7 +22,6 @@ char		*getSName(void *PtrToElf, int index)
 	name = PtrToElf + getSHdr(PtrToElf, elf_header->e_shstrndx)->sh_offset + section->sh_name;
 	return name;
 }
-
 int 		is_elf(void *void_pointer)
 {
 	char *p;

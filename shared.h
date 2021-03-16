@@ -35,5 +35,6 @@ int					cmpname(char *s1, char *s2);
 void 				sort(char **table, int(*cmp)(char*, char*));
 char**				get_bin_files(int argc, char **argv, int *fd);
 int 				find_option(int argc, char **argv, char option);
+char 				**create_table(t_list **lst);
 
 #endif //MY_OWN_NM_SHARED_H

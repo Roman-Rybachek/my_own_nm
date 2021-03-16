@@ -29,7 +29,8 @@ UTILS_SRCS = 		$(UTILS_DIR)/utils.c \
              		$(UTILS_DIR)/ft_itoa_hex.c \
              		$(UTILS_DIR)/lists.c \
              		$(UTILS_DIR)/argv_handler.c \
-             		$(UTILS_DIR)/sort.c
+             		$(UTILS_DIR)/sort.c \
+             		$(UTILS_DIR)/utils2.c
 
 SRC = 				$(UTILS_SRCS) \
 					$(ELF_HANDLER_SRC) \
