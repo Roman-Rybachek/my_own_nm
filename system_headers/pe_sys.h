@@ -15,6 +15,7 @@
 #define IMAGE_NUMBEROF_DIRECTORY_ENTRIES 16
 #define IMAGE_SIZEOF_SHORT_NAME 8
 #define IMAGE_SIZEOF_FILE_HEADER 20
+#define IMAGE_SIZEOF_SYMBOL             18
 
 
 typedef struct 	_IMAGE_DOS_HEADER { // +
@@ -85,7 +86,7 @@ typedef struct _IMAGE_OPTIONAL_HEADER64 { // +
 	DWORD LoaderFlags;
 	DWORD NumberOfRvaAndSizes;
 	IMAGE_DATA_DIRECTORY DataDirectory[IMAGE_NUMBEROF_DIRECTORY_ENTRIES];
-	} IMAGE_OPTIONAL_HEADER64, *PIMAGE_OPTIONAL_HEADER64;
+} IMAGE_OPTIONAL_HEADER64, *PIMAGE_OPTIONAL_HEADER64;
 
 typedef struct _IMAGE_NT_HEADERS64 { // +
 	DWORD Signature;
@@ -124,5 +125,16 @@ typedef struct _IMAGE_SECTION_HEADER {
     WORD  NumberOfLinenumbers;
     DWORD Characteristics;
     } IMAGE_SECTION_HEADER, *PIMAGE_SECTION_HEADER;
+
+typedef struct _IMAGE_COFF_SYMBOLS_HEADER {
+	DWORD NumberOfSymbols;
+	DWORD LvaToFirstSymbol;
+   	DWORD NumberOfLinenumbers;
+   	DWORD LvaToFirstLinenumber;
+	DWORD RvaToFirstByteOfCode;
+	DWORD RvaToLastByteOfCode;
+	DWORD RvaToFirstByteOfData;
+	DWORD RvaToLastByteOfData;
+} IMAGE_COFF_SYMBOLS_HEADER, *PIMAGE_COFF_SYMBOLS_HEADER;
 
 #endif //MY_OWN_NM_PE_H

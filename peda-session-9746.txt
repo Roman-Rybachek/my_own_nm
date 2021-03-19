@@ -1,0 +1,5 @@
+break /home/rinne/School42/other/my_own_nm/utils/arch_system_v.c:37
+break /home/rinne/School42/other/my_own_nm/pe_srcs/pe_handler.c:6
+break /home/rinne/School42/other/my_own_nm/pe_srcs/pe_handler.c:23
+
+set exec-wrapper The wrapper for running programs is \

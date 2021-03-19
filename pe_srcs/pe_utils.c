@@ -1,5 +1,7 @@
 #include "pe_header.h"
 
+
+
 int 		is_pe(void *void_pointer)
 {
 	char *p;
