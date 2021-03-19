@@ -7,4 +7,5 @@ file_with_a_lot_of_lengt
 other_file_with_a_lot_of_lengt
 file1
 file2
-/cmake-build-debug/
+cmake-build-debug/
+cmake-build-debug/*
