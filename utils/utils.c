@@ -65,3 +65,11 @@ char		*ft_substr(char const *s, unsigned int start, size_t len)
 	*result = '\0';
 	return (start_p);
 }
+
+int		ft_isprint(int c)
+{
+    if (c >= 32 && c <= 126)
+        return (1);
+    else
+        return (0);
+}

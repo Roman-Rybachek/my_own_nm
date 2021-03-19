@@ -29,6 +29,7 @@ int					ft_darr_len(char **arr);
 int					ft_tolower(int c);
 char				**add_to_darr(char ***darr, char *add);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
+int		            ft_isprint(int c);
 
 int					cmpadr(char *s1, char *s2);
 int					cmpname(char *s1, char *s2);

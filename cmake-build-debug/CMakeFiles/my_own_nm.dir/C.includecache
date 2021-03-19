@@ -28,19 +28,15 @@ string.h
 stdint.h
 -
 
-/home/rinne/School42/other/my_own_nm/pe_srcs/pe_handler.c
+/Users/jeldora/School21/my_own_nm/pe_srcs/pe_handler.c
 pe_header.h
-/home/rinne/School42/other/my_own_nm/pe_srcs/pe_header.h
+/Users/jeldora/School21/my_own_nm/pe_srcs/pe_header.h
 pe_sys.h
-/home/rinne/School42/other/my_own_nm/pe_srcs/pe_sys.h
+/Users/jeldora/School21/my_own_nm/pe_srcs/pe_sys.h
 
-/home/rinne/School42/other/my_own_nm/pe_srcs/pe_header.h
+/Users/jeldora/School21/my_own_nm/pe_srcs/pe_header.h
 shared.h
-/home/rinne/School42/other/my_own_nm/pe_srcs/shared.h
+/Users/jeldora/School21/my_own_nm/pe_srcs/shared.h
 pe_sys.h
-/home/rinne/School42/other/my_own_nm/pe_srcs/pe_sys.h
-
-/home/rinne/School42/other/my_own_nm/pe_srcs/pe_utils.c
-pe_header.h
-/home/rinne/School42/other/my_own_nm/pe_srcs/pe_header.h
+/Users/jeldora/School21/my_own_nm/pe_srcs/pe_sys.h
 

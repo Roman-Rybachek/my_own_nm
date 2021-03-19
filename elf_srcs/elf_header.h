@@ -1,7 +1,7 @@
 #ifndef MY_OWN_NM_ELF_HEADER_H
 #define MY_OWN_NM_ELF_HEADER_H
 
-# include <elf.h>
+# include "elf_sys.h"
 # include "shared.h"
 
 Elf64_Shdr	*getSHdr(void *PtrToELF, int index);

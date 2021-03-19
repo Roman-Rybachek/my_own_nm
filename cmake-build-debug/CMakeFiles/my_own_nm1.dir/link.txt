@@ -1,1 +1,0 @@
-/usr/bin/cc -g  -rdynamic CMakeFiles/my_own_nm1.dir/my_own_nm.o CMakeFiles/my_own_nm1.dir/utils.o CMakeFiles/my_own_nm1.dir/elf_handler.o  -o my_own_nm1 

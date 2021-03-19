@@ -9,10 +9,13 @@
 #define	WORD		uint16_t
 #define DWORD		uint32_t
 #define ULONGLONG	uint64_t
-#define BYTE		uint16_t
+#define BYTE		uint8_t
 #define SHORT		int16_t
 
 #define IMAGE_NUMBEROF_DIRECTORY_ENTRIES 16
+#define IMAGE_SIZEOF_SHORT_NAME 8
+#define IMAGE_SIZEOF_FILE_HEADER 20
+
 
 typedef struct 	_IMAGE_DOS_HEADER { // +
 	WORD  		e_magic;      /* 00: MZ Header signature */
@@ -39,7 +42,7 @@ typedef struct 	_IMAGE_DOS_HEADER { // +
 typedef struct _IMAGE_DATA_DIRECTORY { // +
 	DWORD VirtualAddress;
 	DWORD Size;
-	} IMAGE_DATA_DIRECTORY, *PIMAGE_DATA_DIRECTORY;
+} IMAGE_DATA_DIRECTORY, *PIMAGE_DATA_DIRECTORY;
 
 typedef struct _IMAGE_FILE_HEADER { // +
 	WORD  Machine;
@@ -105,5 +108,21 @@ typedef struct _IMAGE_SYMBOL {
 	BYTE    StorageClass;
 	BYTE    NumberOfAuxSymbols;
 } IMAGE_SYMBOL;
+
+typedef struct _IMAGE_SECTION_HEADER {
+    BYTE  Name[IMAGE_SIZEOF_SHORT_NAME];
+    union {
+        DWORD PhysicalAddress;
+        DWORD VirtualSize;
+           } Misc;
+    DWORD VirtualAddress;
+    DWORD SizeOfRawData;
+    DWORD PointerToRawData;
+    DWORD PointerToRelocations;
+    DWORD PointerToLinenumbers;
+    WORD  NumberOfRelocations;
+    WORD  NumberOfLinenumbers;
+    DWORD Characteristics;
+    } IMAGE_SECTION_HEADER, *PIMAGE_SECTION_HEADER;
 
 #endif //MY_OWN_NM_PE_H
