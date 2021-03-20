@@ -27,8 +27,6 @@ void	select_handler(void *file, int argc, char **argv)
 
 	if (is_elf(file))
 		table = elf_handler(file);
-	else if (is_pe(file))
-		table = pe_handler(file);
 	sort(table, cmpname);
 	if (find_option(argc, argv, 'n'))
 		sort(table, cmpadr);
